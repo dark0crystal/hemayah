@@ -11,14 +11,15 @@ import "./globals.css";
 // import { auth } from "../../../auth";
 // import NavBar from "../components/navbar/Navbar";
 import Head from "next/head";
+import NavBar from "./components/navbar/Navbar";
 // import OneSignalInitializer from "../components/OneSignalInitializer";
 // import Footer from "./components/Footer";
 
 const alexandria = Alexandria({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "مفقود | MFQOD",
-  description:"مفقود",
+  title: "حماية | HEMAYAH",
+  description:"Himayah",
 };
 
 
@@ -58,7 +59,7 @@ export default async function LocaleLayout({
     <body className={alexandria.className}>
     <div className="absolute top-0 z-[-2] h-screen w-screen bg-white bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(70,130,180,0.3),rgba(255,255,255,0))]"></div>
       <NextIntlClientProvider messages={messages}>
-        {/* <NavBar/> */}
+        <NavBar/>
         {/* <Splash/> */}
         {children}
         {/* <Footer/> */}
