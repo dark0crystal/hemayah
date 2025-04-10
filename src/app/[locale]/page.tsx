@@ -5,8 +5,12 @@ export default function HomePage() {
   const t = useTranslations('HomePage');
   return (
     <div>
-      <h1>{t('title')}</h1>
-      <Link href="/about">{t('about')}</Link>
+      
     </div>
+    // <div className='bg-red-200'>
+    //   <h1 >{t('title')}</h1>
+    //   <Link href="/about">{t('about')}</Link>
+      
+    // </div>
   );
 }
