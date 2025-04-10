@@ -3,5 +3,15 @@
     "HomePage": {
       "title": "Hello world!",
       "about": "Go to the about page"
+    },
+    "navbar":{
+        "brand":"هَاكاثُون حِماية",
+        "brand-duplicate":"هاكاثون حماية",
+        "search":"تيست",
+        "searchBtn":"Search Something",
+        "dashboard":"لوحة التحكم",
+        "report":"تيست",
+        "reportBtn":"Found Something ?"
+
     }
-  }
+}

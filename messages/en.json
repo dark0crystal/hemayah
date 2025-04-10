@@ -2,5 +2,15 @@
     "HomePage": {
       "title": "Hello world!",
       "about": "Go to the about page"
+    },
+    "navbar":{
+        "brand":"Himaya Hackathon",
+        "brand-duplicate":"Himaya Hackathon",
+        "search":"تيست",
+        "searchBtn":"Search Something",
+        "dashboard":"لوحة التحكم",
+        "report":"تيست",
+        "reportBtn":"Found Something ?"
+
     }
   }
