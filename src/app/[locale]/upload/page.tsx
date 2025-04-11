@@ -8,10 +8,9 @@ import * as XLSX from 'xlsx';
 
 interface Applicant {
   id: string;
-  'Civil ID': string;
-  'Disability Description': string;
-  'Disability Type': string;
-  'Date Submitted': string;
+  name: string;
+  nationalId: string;
+  disabilityType: string;
 }
 
 export default function CheckPage() {
@@ -24,13 +23,13 @@ export default function CheckPage() {
     const data = await file.arrayBuffer();
     const workbook = XLSX.read(data);
     const worksheet = workbook.Sheets[workbook.SheetNames[0]];
-    const jsonData = XLSX.utils.sheet_to_json(worksheet);
+    const jsonData = XLSX.utils.sheet_to_json(worksheet) as Applicant[];
     
     // Add unique IDs to each applicant
     const applicantsWithIds = jsonData.map((applicant, index) => ({
       ...applicant,
       id: `app-${index}`,
-    })) as Applicant[];
+    }));
     
     setApplicants(applicantsWithIds);
     setStep('verify');
@@ -68,4 +67,4 @@ export default function CheckPage() {
       )}
     </div>
   );
-} 
+}

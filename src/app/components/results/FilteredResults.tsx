@@ -5,14 +5,14 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@/components/ui/table';
+} from '@/app/components/ui/table';
 
 interface Applicant {
   id: string;
-  name: string;
-  nationalId: string;
-  disabilityType: string;
-  // Add other relevant fields
+  'Civil ID': string;
+  'Disability Description': string;
+  'Disability Type': string;
+  'Date Submitted': string;
 }
 
 interface FilteredResultsProps {
@@ -28,17 +28,19 @@ export function FilteredResults({ accepted, rejected }: FilteredResultsProps) {
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>Name</TableHead>
-              <TableHead>National ID</TableHead>
+              <TableHead>Civil ID</TableHead>
+              <TableHead>Disability Description</TableHead>
               <TableHead>Disability Type</TableHead>
+              <TableHead>Date Submitted</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {accepted.map((applicant) => (
               <TableRow key={applicant.id}>
-                <TableCell>{applicant.name}</TableCell>
-                <TableCell>{applicant.nationalId}</TableCell>
-                <TableCell>{applicant.disabilityType}</TableCell>
+                <TableCell>{applicant['Civil ID']}</TableCell>
+                <TableCell>{applicant['Disability Description']}</TableCell>
+                <TableCell>{applicant['Disability Type']}</TableCell>
+                <TableCell>{applicant['Date Submitted']}</TableCell>
               </TableRow>
             ))}
           </TableBody>
@@ -50,17 +52,19 @@ export function FilteredResults({ accepted, rejected }: FilteredResultsProps) {
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>Name</TableHead>
-              <TableHead>National ID</TableHead>
+              <TableHead>Civil ID</TableHead>
+              <TableHead>Disability Description</TableHead>
               <TableHead>Disability Type</TableHead>
+              <TableHead>Date Submitted</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {rejected.map((applicant) => (
               <TableRow key={applicant.id}>
-                <TableCell>{applicant.name}</TableCell>
-                <TableCell>{applicant.nationalId}</TableCell>
-                <TableCell>{applicant.disabilityType}</TableCell>
+                <TableCell>{applicant['Civil ID']}</TableCell>
+                <TableCell>{applicant['Disability Description']}</TableCell>
+                <TableCell>{applicant['Disability Type']}</TableCell>
+                <TableCell>{applicant['Date Submitted']}</TableCell>
               </TableRow>
             ))}
           </TableBody>
