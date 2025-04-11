@@ -6,169 +6,748 @@ import { DisabilityForecastChart } from '@/app/components/charts/DisabilityForec
 export default function AnalysisPage() {
   const [historicalData, setHistoricalData] = useState<any[]>([]);
   const [forecastData, setForecastData] = useState<any[]>([]);
+  const [testData, setTestData] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [showTestData, setShowTestData] = useState(false);
   const [anomalyDates, setAnomalyDates] = useState<string[]>([]);
+  const [anomalyAlert, setAnomalyAlert] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const loadData = () => {
       setIsLoading(true);
-      setErrorMessage(null);
       
       try {
-        // First, train model and get forecast data
-        const trainResponse = await fetchForecastData();
-        if (trainResponse) {
-          setForecastData(trainResponse);
-        }
-        
-        // Use hard-coded historical data
-        setHistoricalData(SAMPLE_HISTORICAL_DATA);
-        
-        // Optionally check for anomalies in test data
-        const testResponse = await checkForAnomalies();
-        if (testResponse?.anomaly_periods) {
-          setAnomalyDates(testResponse.anomaly_periods);
-        }
-      } catch (error) {
-        console.error('Error fetching data:', error);
-        setErrorMessage('Failed to fetch data. Using sample data instead.');
-        // Fallback to sample data
+        // استخدام البيانات المعرفة مباشرة في الملف
         setHistoricalData(SAMPLE_HISTORICAL_DATA);
         setForecastData(SAMPLE_FORECAST_DATA);
+        setTestData(TEST_DATA);
       } finally {
         setIsLoading(false);
       }
     };
 
-    fetchData();
+    loadData();
   }, []);
 
-  const fetchForecastData = async () => {
-    try {
-      // Prepare training data for upload
-      const formData = new FormData();
-      const trainingBlob = new Blob([JSON.stringify(SAMPLE_HISTORICAL_DATA)], {
-        type: 'application/json'
-      });
-      formData.append('training_file', trainingBlob, 'training_data.json');
-
-      // Make API call to forecast endpoint
-      const response = await fetch('http://localhost:8000/forecast', {
-        method: 'POST',
-        body: formData,
-      });
-
-      if (!response.ok) {
-        throw new Error(`API request failed with status: ${response.status}`);
-      }
-
-      return await response.json();
-    } catch (error) {
-      console.error('Error fetching forecast data:', error);
-      throw error;
+  const handleApplyTestData = () => {
+    setShowTestData(true);
+    
+    // التحقق من وجود حالات شاذة (بيانات الاختبار تتجاوز الحد الأعلى)
+    const anomalies = detectAnomalies(TEST_DATA, SAMPLE_FORECAST_DATA);
+    
+    if (anomalies.length > 0) {
+      setAnomalyDates(anomalies);
+      setAnomalyAlert(`تم اكتشاف حالة شاذة! عدد الطلبات في ${anomalies.join(', ')} يتجاوز الحد الأعلى للتنبؤ.`);
+    } else {
+      setAnomalyAlert(null);
     }
   };
 
-  const checkForAnomalies = async () => {
-    try {
-      // Prepare test data for upload (use the March 15 data that has potential anomalies)
-      const formData = new FormData();
-      const testBlob = new Blob([JSON.stringify(TEST_DATA)], {
-        type: 'application/json'
-      });
-      formData.append('test_file', testBlob, 'test_data.json');
-
-      // Make API call to check endpoint
-      const response = await fetch('http://localhost:8000/check', {
-        method: 'POST',
-        body: formData,
-      });
-
-      if (!response.ok) {
-        throw new Error(`API request failed with status: ${response.status}`);
+  const detectAnomalies = (testData: any[], forecastData: any[]) => {
+    // تجميع بيانات الاختبار حسب التاريخ
+    const testCountsByDate = new Map<string, number>();
+    
+    testData.forEach(item => {
+      const date = item['Date Submitted'];
+      testCountsByDate.set(date, (testCountsByDate.get(date) || 0) + 1);
+    });
+    
+    // التحقق مما إذا كان أي تاريخ يتجاوز الحد الأعلى للتنبؤ
+    const anomalyDates: string[] = [];
+    
+    testCountsByDate.forEach((count, date) => {
+      const matchingForecast = forecastData.find(f => f.ds === date);
+      
+      if (matchingForecast && count > matchingForecast.yhat_upper) {
+        anomalyDates.push(date);
       }
-
-      return await response.json();
-    } catch (error) {
-      console.error('Error checking for anomalies:', error);
-      // Just log error but don't throw - this is optional functionality
-      return null;
-    }
+    });
+    
+    return anomalyDates;
   };
-
+  
   return (
     <div className="container mx-auto py-8 px-4">
-      <h1 className="text-3xl font-bold mb-6">Disability Applications Analysis</h1>
+      <h1 className="text-3xl font-bold mb-6">تحليل طلبات الإعاقة</h1>
       
       {isLoading ? (
         <div className="flex justify-center items-center h-96">
-          <div className="text-xl">Loading data...</div>
+          <div className="text-xl">جاري تحميل البيانات...</div>
         </div>
       ) : (
         <>
-          {errorMessage && (
-            <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
-              {errorMessage}
-            </div>
-          )}
-          
-          <div className="bg-white p-6 rounded-lg shadow-lg">
+          <div className="bg-white p-6 rounded-lg shadow-lg mb-6">
             <DisabilityForecastChart 
               historicalData={historicalData} 
-              forecastData={forecastData} 
+              forecastData={forecastData}
+              testData={showTestData ? testData : []}
             />
           </div>
           
-          {anomalyDates.length > 0 && (
-            <div className="mt-4 bg-yellow-100 border border-yellow-400 text-yellow-700 px-4 py-3 rounded">
-              <p className="font-bold">Anomaly Detected!</p>
-              <p>Unusual number of applications detected on: {anomalyDates.join(', ')}</p>
+          <div className="mb-6">
+            <button 
+              onClick={handleApplyTestData}
+              disabled={showTestData}
+              className={`bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg focus:outline-none focus:shadow-outline transition-all duration-300 transform ${!showTestData ? 'animate-pulse hover:scale-105' : 'opacity-70 cursor-not-allowed'}`}
+            >
+              {showTestData ? "تم تطبيق بيانات الاختبار" : "تطبيق بيانات الاختبار"}
+            </button>
+          </div>
+          
+          {anomalyAlert && (
+            <div className="mb-6 bg-red-100 border-2 border-red-500 text-red-800 px-6 py-4 rounded-lg shadow-md animate-bounce">
+              <p className="font-bold text-lg">⚠️ تم اكتشاف حالة شاذة!</p>
+              <p className="mt-1">{anomalyAlert}</p>
+              <p className="mt-2 font-semibold">لاحظ الخط الأحمر المتقطع الذي يوضح تجاوز بيانات الاختبار لحدود التنبؤ.</p>
             </div>
           )}
+          
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <h2 className="text-xl font-bold mb-4">حول التنبؤ</h2>
+              <p className="mb-2">
+                يعرض هذا الرسم البياني بيانات طلبات الإعاقة التاريخية مع توقعات الاتجاهات المستقبلية.
+              </p>
+              <p className="mb-2">
+                <span className="font-semibold">التنبؤ (yhat):</span> العدد المتوقع لطلبات الإعاقة.
+              </p>
+              <p className="mb-2">
+                <span className="font-semibold">الحد الأعلى (yhat_upper):</span> النطاق الأعلى لفترة التنبؤ.
+              </p>
+              <p>
+                <span className="font-semibold">الحد الأدنى (yhat_lower):</span> النطاق الأدنى لفترة التنبؤ.
+              </p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <h2 className="text-xl font-bold mb-4">جمع البيانات</h2>
+              <p className="mb-2">
+                تم جمع البيانات التاريخية من وزارة الصحة وتشمل طلبات الإعاقة من يناير إلى فبراير 2025.
+              </p>
+              <p className="mb-2">
+                تم إنشاء التنبؤ باستخدام نموذج تنبؤ السلاسل الزمنية المدرب على البيانات التاريخية.
+              </p>
+              <p>
+                يحدد نموذج التنبؤ الأنماط في الطلبات السابقة ويتوقع الاتجاهات المستقبلية مع مراعاة عدم اليقين.
+              </p>
+              {anomalyDates.length > 0 && (
+                <p className="mt-2 text-red-600">
+                  اكتشف النظام ارتفاعًا غير عادي في الطلبات يقع خارج النطاق المتوقع.
+                </p>
+              )}
+            </div>
+          </div>
         </>
       )}
-      
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="bg-white p-6 rounded-lg shadow-lg">
-          <h2 className="text-xl font-bold mb-4">About the Forecast</h2>
-          <p className="mb-2">
-            This chart shows historical disability applications data along with forecasted future trends.
-          </p>
-          <p className="mb-2">
-            <span className="font-semibold">Forecast (yhat):</span> The predicted number of disability applications.
-          </p>
-          <p className="mb-2">
-            <span className="font-semibold">Upper Bound (yhat_upper):</span> The upper range of the prediction interval.
-          </p>
-          <p>
-            <span className="font-semibold">Lower Bound (yhat_lower):</span> The lower range of the prediction interval.
-          </p>
-        </div>
-        
-        <div className="bg-white p-6 rounded-lg shadow-lg">
-          <h2 className="text-xl font-bold mb-4">Data Collection</h2>
-          <p className="mb-2">
-            The historical data is collected from the Ministry of Health and includes disability applications from January to February 2025.
-          </p>
-          <p className="mb-2">
-            The forecast is generated using a time series prediction model trained on the historical data.
-          </p>
-          <p>
-            The prediction model identifies patterns in past applications and projects future trends while accounting for uncertainty.
-          </p>
-          {anomalyDates.length > 0 && (
-            <p className="mt-2 text-yellow-600">
-              The system has detected an unusual spike in applications that falls outside the expected range.
-            </p>
-          )}
-        </div>
-      </div>
     </div>
   );
 }
 
-// Full dataset of sample historical data from the Ministry
+// بيانات اختبار نموذجية مع حالة شاذة محتملة في 15 مارس
+const TEST_DATA = [
+  {
+    "Civil ID": "20000001",
+    "Disability Description": "Amputation below knee",
+    "Disability Type": "Physical",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000002",
+    "Disability Description": "Complete hearing loss",
+    "Disability Type": "Hearing",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000003",
+    "Disability Description": "Deaf in one ear",
+    "Disability Type": "Hearing",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000004",
+    "Disability Description": "Amputation below knee",
+    "Disability Type": "Physical",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000005",
+    "Disability Description": "Mild hearing loss",
+    "Disability Type": "Hearing",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000006",
+    "Disability Description": "Amputation below knee",
+    "Disability Type": "Physical",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000007",
+    "Disability Description": "Mild hearing loss",
+    "Disability Type": "Hearing",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000008",
+    "Disability Description": "Total blindness",
+    "Disability Type": "Visual",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000009",
+    "Disability Description": "Complete hearing loss",
+    "Disability Type": "Hearing",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000010",
+    "Disability Description": "Total blindness",
+    "Disability Type": "Visual",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000011",
+    "Disability Description": "Amputation below knee",
+    "Disability Type": "Physical",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000012",
+    "Disability Description": "Total blindness",
+    "Disability Type": "Visual",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000013",
+    "Disability Description": "Total blindness",
+    "Disability Type": "Visual",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000014",
+    "Disability Description": "Limb loss",
+    "Disability Type": "Physical",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000015",
+    "Disability Description": "Amputation below knee",
+    "Disability Type": "Physical",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000016",
+    "Disability Description": "Mild hearing loss",
+    "Disability Type": "Hearing",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000017",
+    "Disability Description": "Autism",
+    "Disability Type": "Mental",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000018",
+    "Disability Description": "Partial blindness",
+    "Disability Type": "Visual",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000019",
+    "Disability Description": "Amputation below knee",
+    "Disability Type": "Physical",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000020",
+    "Disability Description": "Limb loss",
+    "Disability Type": "Physical",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000021",
+    "Disability Description": "Amputation below knee",
+    "Disability Type": "Physical",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000022",
+    "Disability Description": "Amputation below knee",
+    "Disability Type": "Physical",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000023",
+    "Disability Description": "Limb loss",
+    "Disability Type": "Physical",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000024",
+    "Disability Description": "Partial blindness",
+    "Disability Type": "Visual",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000025",
+    "Disability Description": "Deaf in one ear",
+    "Disability Type": "Hearing",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000026",
+    "Disability Description": "Mild hearing loss",
+    "Disability Type": "Hearing",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000027",
+    "Disability Description": "Complete hearing loss",
+    "Disability Type": "Hearing",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000028",
+    "Disability Description": "Color blindness",
+    "Disability Type": "Visual",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000029",
+    "Disability Description": "Total blindness",
+    "Disability Type": "Visual",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000030",
+    "Disability Description": "Complete hearing loss",
+    "Disability Type": "Hearing",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000031",
+    "Disability Description": "Partial blindness",
+    "Disability Type": "Visual",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000032",
+    "Disability Description": "Amputation below knee",
+    "Disability Type": "Physical",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000033",
+    "Disability Description": "Autism",
+    "Disability Type": "Mental",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000034",
+    "Disability Description": "Total blindness",
+    "Disability Type": "Visual",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000035",
+    "Disability Description": "Total blindness",
+    "Disability Type": "Visual",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000036",
+    "Disability Description": "Autism",
+    "Disability Type": "Mental",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000037",
+    "Disability Description": "Partial blindness",
+    "Disability Type": "Visual",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000038",
+    "Disability Description": "Mild hearing loss",
+    "Disability Type": "Hearing",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000039",
+    "Disability Description": "Total blindness",
+    "Disability Type": "Visual",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000040",
+    "Disability Description": "Partial blindness",
+    "Disability Type": "Visual",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000041",
+    "Disability Description": "Depression",
+    "Disability Type": "Mental",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000042",
+    "Disability Description": "Limb loss",
+    "Disability Type": "Physical",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000043",
+    "Disability Description": "Schizophrenia",
+    "Disability Type": "Mental",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000044",
+    "Disability Description": "Schizophrenia",
+    "Disability Type": "Mental",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000045",
+    "Disability Description": "Schizophrenia",
+    "Disability Type": "Mental",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000046",
+    "Disability Description": "Paralysis",
+    "Disability Type": "Physical",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000047",
+    "Disability Description": "Complete hearing loss",
+    "Disability Type": "Hearing",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000048",
+    "Disability Description": "Partial blindness",
+    "Disability Type": "Visual",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000049",
+    "Disability Description": "Autism",
+    "Disability Type": "Mental",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000050",
+    "Disability Description": "Mild hearing loss",
+    "Disability Type": "Hearing",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000051",
+    "Disability Description": "Color blindness",
+    "Disability Type": "Visual",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000052",
+    "Disability Description": "Deaf in one ear",
+    "Disability Type": "Hearing",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000053",
+    "Disability Description": "Schizophrenia",
+    "Disability Type": "Mental",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000054",
+    "Disability Description": "Amputation below knee",
+    "Disability Type": "Physical",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000055",
+    "Disability Description": "Deaf in one ear",
+    "Disability Type": "Hearing",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000056",
+    "Disability Description": "Autism",
+    "Disability Type": "Mental",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000057",
+    "Disability Description": "Schizophrenia",
+    "Disability Type": "Mental",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000058",
+    "Disability Description": "Complete hearing loss",
+    "Disability Type": "Hearing",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000059",
+    "Disability Description": "Amputation below knee",
+    "Disability Type": "Physical",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000060",
+    "Disability Description": "Color blindness",
+    "Disability Type": "Visual",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000061",
+    "Disability Description": "Amputation below knee",
+    "Disability Type": "Physical",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000062",
+    "Disability Description": "Schizophrenia",
+    "Disability Type": "Mental",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000063",
+    "Disability Description": "Mild hearing loss",
+    "Disability Type": "Hearing",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000064",
+    "Disability Description": "Amputation below knee",
+    "Disability Type": "Physical",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000065",
+    "Disability Description": "Depression",
+    "Disability Type": "Mental",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000066",
+    "Disability Description": "Limb loss",
+    "Disability Type": "Physical",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000067",
+    "Disability Description": "Paralysis",
+    "Disability Type": "Physical",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000068",
+    "Disability Description": "Autism",
+    "Disability Type": "Mental",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000069",
+    "Disability Description": "Limb loss",
+    "Disability Type": "Physical",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000070",
+    "Disability Description": "Limb loss",
+    "Disability Type": "Physical",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000071",
+    "Disability Description": "Complete hearing loss",
+    "Disability Type": "Hearing",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000072",
+    "Disability Description": "Mild hearing loss",
+    "Disability Type": "Hearing",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000073",
+    "Disability Description": "Total blindness",
+    "Disability Type": "Visual",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000074",
+    "Disability Description": "Partial blindness",
+    "Disability Type": "Visual",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000075",
+    "Disability Description": "Partial blindness",
+    "Disability Type": "Visual",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000076",
+    "Disability Description": "Limb loss",
+    "Disability Type": "Physical",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000077",
+    "Disability Description": "Complete hearing loss",
+    "Disability Type": "Hearing",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000078",
+    "Disability Description": "Schizophrenia",
+    "Disability Type": "Mental",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000079",
+    "Disability Description": "Color blindness",
+    "Disability Type": "Visual",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000080",
+    "Disability Description": "Deaf in one ear",
+    "Disability Type": "Hearing",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000081",
+    "Disability Description": "Mild hearing loss",
+    "Disability Type": "Hearing",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000082",
+    "Disability Description": "Amputation below knee",
+    "Disability Type": "Physical",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000083",
+    "Disability Description": "Mild hearing loss",
+    "Disability Type": "Hearing",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000084",
+    "Disability Description": "Mild hearing loss",
+    "Disability Type": "Hearing",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000085",
+    "Disability Description": "Amputation below knee",
+    "Disability Type": "Physical",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000086",
+    "Disability Description": "Amputation below knee",
+    "Disability Type": "Physical",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000087",
+    "Disability Description": "Deaf in one ear",
+    "Disability Type": "Hearing",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000088",
+    "Disability Description": "Limb loss",
+    "Disability Type": "Physical",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000089",
+    "Disability Description": "Mild hearing loss",
+    "Disability Type": "Hearing",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000090",
+    "Disability Description": "Autism",
+    "Disability Type": "Mental",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000091",
+    "Disability Description": "Autism",
+    "Disability Type": "Mental",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000092",
+    "Disability Description": "Autism",
+    "Disability Type": "Mental",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000093",
+    "Disability Description": "Depression",
+    "Disability Type": "Mental",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000094",
+    "Disability Description": "Depression",
+    "Disability Type": "Mental",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000095",
+    "Disability Description": "Complete hearing loss",
+    "Disability Type": "Hearing",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000096",
+    "Disability Description": "Deaf in one ear",
+    "Disability Type": "Hearing",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000097",
+    "Disability Description": "Amputation below knee",
+    "Disability Type": "Physical",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000098",
+    "Disability Description": "Partial blindness",
+    "Disability Type": "Visual",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000099",
+    "Disability Description": "Autism",
+    "Disability Type": "Mental",
+    "Date Submitted": "2025-03-15"
+  },
+  {
+    "Civil ID": "20000100",
+    "Disability Description": "Deaf in one ear",
+    "Disability Type": "Hearing",
+    "Date Submitted": "2025-03-15"
+  }
+]
+
+// مجموعة بيانات كاملة من البيانات التاريخية النموذجية من الوزارة
 const SAMPLE_HISTORICAL_DATA = [
   {
     "Civil ID": "10000001",
@@ -3169,35 +3748,6 @@ const SAMPLE_HISTORICAL_DATA = [
     "Disability Description": "Mild hearing loss",
     "Disability Type": "Hearing",
     "Date Submitted": "2025-02-16"
-  }
-];
-
-// Sample test data with potential anomaly on March 15
-const TEST_DATA = [
-  {
-    "Civil ID": "20000001",
-    "Disability Description": "Amputation below knee",
-    "Disability Type": "Physical",
-    "Date Submitted": "2025-03-15"
-  },
-  {
-    "Civil ID": "20000002",
-    "Disability Description": "Complete hearing loss",
-    "Disability Type": "Hearing",
-    "Date Submitted": "2025-03-15"
-  },
-  // Add more test data as needed
-  {
-    "Civil ID": "20000099",
-    "Disability Description": "Autism",
-    "Disability Type": "Mental",
-    "Date Submitted": "2025-03-15"
-  },
-  {
-    "Civil ID": "20000100",
-    "Disability Description": "Deaf in one ear",
-    "Disability Type": "Hearing",
-    "Date Submitted": "2025-03-15"
   }
 ];
 

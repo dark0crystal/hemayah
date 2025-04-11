@@ -11,7 +11,8 @@ import {
   ReferenceLine,
   Area,
   ComposedChart,
-  TooltipProps
+  TooltipProps,
+  Scatter
 } from 'recharts';
 import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
@@ -38,26 +39,50 @@ interface ForecastDataPoint {
   yhat_upper: number;
 }
 
+interface TestDataPoint {
+  'Civil ID': string;
+  'Disability Description': string;
+  'Disability Type': string;
+  'Date Submitted': string;
+}
+
 interface ChartDataPoint {
   date: string;
   formattedDate: string;
   count?: number;
+  testCount?: number;
+  anomalyCount?: number;
   yhat?: number;
   yhat_lower?: number;
   yhat_upper?: number;
+  isAnomaly?: boolean;
 }
 
 interface DisabilityForecastChartProps {
   historicalData: HistoricalDataPoint[];
   forecastData: ForecastDataPoint[];
+  testData?: TestDataPoint[];
 }
 
 export function DisabilityForecastChart({ 
   historicalData, 
-  forecastData 
+  forecastData,
+  testData = []
 }: DisabilityForecastChartProps) {
   const [chartData, setChartData] = useState<ChartDataPoint[]>([]);
   const [todayDate, setTodayDate] = useState<string>('');
+  const [anomalyPointSize, setAnomalyPointSize] = useState<number>(6);
+
+  // Twinkling animation effect for anomaly points
+  useEffect(() => {
+    if (testData.length > 0) {
+      const interval = setInterval(() => {
+        setAnomalyPointSize(prev => prev === 6 ? 10 : 6);
+      }, 600);
+      
+      return () => clearInterval(interval);
+    }
+  }, [testData]);
 
   useEffect(() => {
     // Process the input data and prepare it for the chart
@@ -83,15 +108,56 @@ export function DisabilityForecastChart({
           });
         });
       
+      // Process test data - count applications by date
+      if (testData && testData.length > 0) {
+        const testCountsByDate = new Map<string, number>();
+        
+        testData.forEach(item => {
+          const date = item['Date Submitted'];
+          testCountsByDate.set(date, (testCountsByDate.get(date) || 0) + 1);
+        });
+        
+        // Add test counts to existing chart data points or create new ones
+        testCountsByDate.forEach((count, date) => {
+          const existingPoint = processedData.find(point => point.date === date);
+          
+          if (existingPoint) {
+            existingPoint.testCount = count;
+          } else {
+            processedData.push({
+              date,
+              formattedDate: formatDate(date),
+              testCount: count
+            });
+          }
+        });
+      }
+      
       // Process forecast data
       forecastData.forEach(item => {
-        processedData.push({
-          date: item.ds,
-          formattedDate: formatDate(item.ds),
-          yhat: item.yhat,
-          yhat_lower: item.yhat_lower,
-          yhat_upper: item.yhat_upper
-        });
+        const existingPoint = processedData.find(point => point.date === item.ds);
+        
+        if (existingPoint) {
+          existingPoint.yhat = item.yhat;
+          existingPoint.yhat_lower = item.yhat_lower;
+          existingPoint.yhat_upper = item.yhat_upper;
+        } else {
+          processedData.push({
+            date: item.ds,
+            formattedDate: formatDate(item.ds),
+            yhat: item.yhat,
+            yhat_lower: item.yhat_lower,
+            yhat_upper: item.yhat_upper
+          });
+        }
+      });
+
+      // Mark anomalies - test data exceeding upper bound
+      processedData.forEach(point => {
+        if (point.testCount !== undefined && point.yhat_upper !== undefined && point.testCount > point.yhat_upper) {
+          point.isAnomaly = true;
+          point.anomalyCount = point.testCount;
+        }
       });
 
       // Sort by date
@@ -105,7 +171,7 @@ export function DisabilityForecastChart({
     
     // Process and set chart data
     setChartData(processData());
-  }, [historicalData, forecastData]);
+  }, [historicalData, forecastData, testData]);
 
   // Custom tooltip component
   const CustomTooltip = ({ active, payload, label }: TooltipProps<number, string>) => {
@@ -116,9 +182,18 @@ export function DisabilityForecastChart({
         <div className="bg-white p-3 border rounded shadow-md">
           <p className="font-bold">{`Date: ${dataPoint.formattedDate}`}</p>
           
-          {dataPoint.count !== undefined ? (
+          {dataPoint.count !== undefined && (
             <p>{`Actual Cases: ${dataPoint.count}`}</p>
-          ) : (
+          )}
+          
+          {dataPoint.testCount !== undefined && (
+            <p className={`${dataPoint.isAnomaly ? 'text-red-600 font-bold' : 'text-purple-600'}`}>
+              {`Test Cases: ${dataPoint.testCount}`}
+              {dataPoint.isAnomaly && ' ⚠️ ANOMALY'}
+            </p>
+          )}
+          
+          {dataPoint.yhat !== undefined && (
             <>
               <p>{`Forecast: ${dataPoint.yhat?.toFixed(2)}`}</p>
               <p>{`Lower Bound: ${dataPoint.yhat_lower?.toFixed(2)}`}</p>
@@ -196,6 +271,55 @@ export function DisabilityForecastChart({
               animationDuration={1000}
               animationEasing="ease-in-out"
             />
+            
+            {/* Test data */}
+            {testData && testData.length > 0 && (
+              <Line
+                type="monotone"
+                dataKey="testCount"
+                stroke="#9333ea"
+                strokeWidth={3}
+                dot={{ r: 5, fill: "#9333ea", strokeWidth: 2, stroke: "#ffffff" }}
+                activeDot={{ r: 8, fill: "#9333ea", strokeWidth: 2, stroke: "#ffffff" }}
+                name="Test Cases"
+                connectNulls
+                isAnimationActive={true}
+                animationDuration={1500}
+                animationEasing="ease-in-out"
+                strokeDasharray="5 5"
+              />
+            )}
+            
+            {/* Anomaly points with twinkling effect */}
+            {testData && testData.length > 0 && (
+              <Scatter
+                dataKey="anomalyCount"
+                fill="#ff0000"
+                name="Anomalies"
+                shape={({ cx, cy }) => (
+                  <svg>
+                    <circle 
+                      cx={cx} 
+                      cy={cy} 
+                      r={anomalyPointSize} 
+                      fill="#ff0000" 
+                      stroke="#ffffff" 
+                      strokeWidth={2} 
+                    />
+                    <circle 
+                      cx={cx} 
+                      cy={cy} 
+                      r={anomalyPointSize + 4} 
+                      fill="none" 
+                      stroke="#ff0000" 
+                      strokeWidth={1.5} 
+                      strokeDasharray="4 4"
+                      opacity={0.6}
+                    />
+                  </svg>
+                )}
+              />
+            )}
 
             {/* Forecast data */}
             <Line
@@ -236,11 +360,23 @@ export function DisabilityForecastChart({
           </ComposedChart>
         </ResponsiveContainer>
       </div>
-      <div className="mt-4 flex items-center justify-center gap-6">
+      <div className="mt-4 flex items-center justify-center gap-6 flex-wrap">
         <div className="flex items-center">
           <div className="w-4 h-4 bg-blue-600 rounded-full mr-2"></div>
           <span>Historical Data</span>
         </div>
+        {testData && testData.length > 0 && (
+          <>
+            <div className="flex items-center">
+              <div className="w-4 h-4 bg-purple-600 rounded-full mr-2"></div>
+              <span>Test Data</span>
+            </div>
+            <div className="flex items-center">
+              <div className="w-4 h-4 bg-red-600 rounded-full mr-2 animate-pulse"></div>
+              <span className="font-semibold text-red-600">Anomalies (exceeding forecast)</span>
+            </div>
+          </>
+        )}
         <div className="flex items-center">
           <div className="w-4 h-4 bg-emerald-600 rounded-full mr-2"></div>
           <span>Forecast</span>
