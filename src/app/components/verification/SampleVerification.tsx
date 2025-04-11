@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/app/components/ui/button';
 import {
   Table,
   TableBody,
@@ -7,15 +7,15 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@/components/ui/table';
-import { Checkbox } from '@/components/ui/checkbox';
+} from '@/app/components/ui/table';
+import { Checkbox } from '@/app/components/ui/checkbox';
 
 interface Applicant {
   id: string;
-  name: string;
-  nationalId: string;
-  disabilityType: string;
-  // Add other relevant fields
+  'Civil ID': string;
+  'Disability Description': string;
+  'Disability Type': string;
+  'Date Submitted': string;
 }
 
 interface SampleVerificationProps {
@@ -59,18 +59,20 @@ export function SampleVerification({
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead>Name</TableHead>
-                <TableHead>National ID</TableHead>
+                <TableHead>Civil ID</TableHead>
+                <TableHead>Disability Description</TableHead>
                 <TableHead>Disability Type</TableHead>
+                <TableHead>Date Submitted</TableHead>
                 <TableHead>Accept</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
               {selectedSample.map((applicant) => (
                 <TableRow key={applicant.id}>
-                  <TableCell>{applicant.name}</TableCell>
-                  <TableCell>{applicant.nationalId}</TableCell>
-                  <TableCell>{applicant.disabilityType}</TableCell>
+                  <TableCell>{applicant['Civil ID']}</TableCell>
+                  <TableCell>{applicant['Disability Description']}</TableCell>
+                  <TableCell>{applicant['Disability Type']}</TableCell>
+                  <TableCell>{applicant['Date Submitted']}</TableCell>
                   <TableCell>
                     <Checkbox
                       checked={verificationStatus[applicant.id] || false}
