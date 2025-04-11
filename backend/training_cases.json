@@ -1,0 +1,3002 @@
+[
+    {
+      "Civil ID": "10000001",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-17"
+    },
+    {
+      "Civil ID": "10000002",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-15"
+    },
+    {
+      "Civil ID": "10000003",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-04"
+    },
+    {
+      "Civil ID": "10000004",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-10"
+    },
+    {
+      "Civil ID": "10000005",
+      "Disability Description": "Limb loss",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-17"
+    },
+    {
+      "Civil ID": "10000006",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-11"
+    },
+    {
+      "Civil ID": "10000007",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-18"
+    },
+    {
+      "Civil ID": "10000008",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-28"
+    },
+    {
+      "Civil ID": "10000009",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-21"
+    },
+    {
+      "Civil ID": "10000010",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-24"
+    },
+    {
+      "Civil ID": "10000011",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-15"
+    },
+    {
+      "Civil ID": "10000012",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-11"
+    },
+    {
+      "Civil ID": "10000013",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-13"
+    },
+    {
+      "Civil ID": "10000014",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-24"
+    },
+    {
+      "Civil ID": "10000015",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-28"
+    },
+    {
+      "Civil ID": "10000016",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-07"
+    },
+    {
+      "Civil ID": "10000017",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-08"
+    },
+    {
+      "Civil ID": "10000018",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-26"
+    },
+    {
+      "Civil ID": "10000019",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-05"
+    },
+    {
+      "Civil ID": "10000020",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-16"
+    },
+    {
+      "Civil ID": "10000021",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-06"
+    },
+    {
+      "Civil ID": "10000022",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-07"
+    },
+    {
+      "Civil ID": "10000023",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-05"
+    },
+    {
+      "Civil ID": "10000024",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-24"
+    },
+    {
+      "Civil ID": "10000025",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-11"
+    },
+    {
+      "Civil ID": "10000026",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-27"
+    },
+    {
+      "Civil ID": "10000027",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-31"
+    },
+    {
+      "Civil ID": "10000028",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-29"
+    },
+    {
+      "Civil ID": "10000029",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-28"
+    },
+    {
+      "Civil ID": "10000030",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-27"
+    },
+    {
+      "Civil ID": "10000031",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-13"
+    },
+    {
+      "Civil ID": "10000032",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-05"
+    },
+    {
+      "Civil ID": "10000033",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-02"
+    },
+    {
+      "Civil ID": "10000034",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-03"
+    },
+    {
+      "Civil ID": "10000035",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-25"
+    },
+    {
+      "Civil ID": "10000036",
+      "Disability Description": "Limb loss",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-15"
+    },
+    {
+      "Civil ID": "10000037",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-25"
+    },
+    {
+      "Civil ID": "10000038",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-12"
+    },
+    {
+      "Civil ID": "10000039",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-18"
+    },
+    {
+      "Civil ID": "10000040",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-12"
+    },
+    {
+      "Civil ID": "10000041",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-11"
+    },
+    {
+      "Civil ID": "10000042",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-21"
+    },
+    {
+      "Civil ID": "10000043",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-01"
+    },
+    {
+      "Civil ID": "10000044",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-13"
+    },
+    {
+      "Civil ID": "10000045",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-12"
+    },
+    {
+      "Civil ID": "10000046",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-14"
+    },
+    {
+      "Civil ID": "10000047",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-27"
+    },
+    {
+      "Civil ID": "10000048",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-03"
+    },
+    {
+      "Civil ID": "10000049",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-25"
+    },
+    {
+      "Civil ID": "10000050",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-20"
+    },
+    {
+      "Civil ID": "10000051",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-03"
+    },
+    {
+      "Civil ID": "10000052",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-11"
+    },
+    {
+      "Civil ID": "10000053",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-20"
+    },
+    {
+      "Civil ID": "10000054",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-04"
+    },
+    {
+      "Civil ID": "10000055",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-10"
+    },
+    {
+      "Civil ID": "10000056",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-28"
+    },
+    {
+      "Civil ID": "10000057",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-16"
+    },
+    {
+      "Civil ID": "10000058",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-20"
+    },
+    {
+      "Civil ID": "10000059",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-14"
+    },
+    {
+      "Civil ID": "10000060",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-12"
+    },
+    {
+      "Civil ID": "10000061",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-31"
+    },
+    {
+      "Civil ID": "10000062",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-26"
+    },
+    {
+      "Civil ID": "10000063",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-14"
+    },
+    {
+      "Civil ID": "10000064",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-15"
+    },
+    {
+      "Civil ID": "10000065",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-14"
+    },
+    {
+      "Civil ID": "10000066",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-19"
+    },
+    {
+      "Civil ID": "10000067",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-25"
+    },
+    {
+      "Civil ID": "10000068",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-10"
+    },
+    {
+      "Civil ID": "10000069",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-06"
+    },
+    {
+      "Civil ID": "10000070",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-09"
+    },
+    {
+      "Civil ID": "10000071",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-10"
+    },
+    {
+      "Civil ID": "10000072",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-04"
+    },
+    {
+      "Civil ID": "10000073",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-08"
+    },
+    {
+      "Civil ID": "10000074",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-21"
+    },
+    {
+      "Civil ID": "10000075",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-17"
+    },
+    {
+      "Civil ID": "10000076",
+      "Disability Description": "Limb loss",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-09"
+    },
+    {
+      "Civil ID": "10000077",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-15"
+    },
+    {
+      "Civil ID": "10000078",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-02"
+    },
+    {
+      "Civil ID": "10000079",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-26"
+    },
+    {
+      "Civil ID": "10000080",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-26"
+    },
+    {
+      "Civil ID": "10000081",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-07"
+    },
+    {
+      "Civil ID": "10000082",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-10"
+    },
+    {
+      "Civil ID": "10000083",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-25"
+    },
+    {
+      "Civil ID": "10000084",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-11"
+    },
+    {
+      "Civil ID": "10000085",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-05"
+    },
+    {
+      "Civil ID": "10000086",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-20"
+    },
+    {
+      "Civil ID": "10000087",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-01"
+    },
+    {
+      "Civil ID": "10000088",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-20"
+    },
+    {
+      "Civil ID": "10000089",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-01"
+    },
+    {
+      "Civil ID": "10000090",
+      "Disability Description": "Limb loss",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-17"
+    },
+    {
+      "Civil ID": "10000091",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-28"
+    },
+    {
+      "Civil ID": "10000092",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-25"
+    },
+    {
+      "Civil ID": "10000093",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-01"
+    },
+    {
+      "Civil ID": "10000094",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-06"
+    },
+    {
+      "Civil ID": "10000095",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-09"
+    },
+    {
+      "Civil ID": "10000096",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-12"
+    },
+    {
+      "Civil ID": "10000097",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-22"
+    },
+    {
+      "Civil ID": "10000098",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-04"
+    },
+    {
+      "Civil ID": "10000099",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-11"
+    },
+    {
+      "Civil ID": "10000100",
+      "Disability Description": "Limb loss",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-28"
+    },
+    {
+      "Civil ID": "10000101",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-20"
+    },
+    {
+      "Civil ID": "10000102",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-21"
+    },
+    {
+      "Civil ID": "10000103",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-06"
+    },
+    {
+      "Civil ID": "10000104",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-18"
+    },
+    {
+      "Civil ID": "10000105",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-24"
+    },
+    {
+      "Civil ID": "10000106",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-14"
+    },
+    {
+      "Civil ID": "10000107",
+      "Disability Description": "Limb loss",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-17"
+    },
+    {
+      "Civil ID": "10000108",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-01"
+    },
+    {
+      "Civil ID": "10000109",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-18"
+    },
+    {
+      "Civil ID": "10000110",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-18"
+    },
+    {
+      "Civil ID": "10000111",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-20"
+    },
+    {
+      "Civil ID": "10000112",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-19"
+    },
+    {
+      "Civil ID": "10000113",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-04"
+    },
+    {
+      "Civil ID": "10000114",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-16"
+    },
+    {
+      "Civil ID": "10000115",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-30"
+    },
+    {
+      "Civil ID": "10000116",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-11"
+    },
+    {
+      "Civil ID": "10000117",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-20"
+    },
+    {
+      "Civil ID": "10000118",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-12"
+    },
+    {
+      "Civil ID": "10000119",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-26"
+    },
+    {
+      "Civil ID": "10000120",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-16"
+    },
+    {
+      "Civil ID": "10000121",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-04"
+    },
+    {
+      "Civil ID": "10000122",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-28"
+    },
+    {
+      "Civil ID": "10000123",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-13"
+    },
+    {
+      "Civil ID": "10000124",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-14"
+    },
+    {
+      "Civil ID": "10000125",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-16"
+    },
+    {
+      "Civil ID": "10000126",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-23"
+    },
+    {
+      "Civil ID": "10000127",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-05"
+    },
+    {
+      "Civil ID": "10000128",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-12"
+    },
+    {
+      "Civil ID": "10000129",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-12"
+    },
+    {
+      "Civil ID": "10000130",
+      "Disability Description": "Limb loss",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-08"
+    },
+    {
+      "Civil ID": "10000131",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-11"
+    },
+    {
+      "Civil ID": "10000132",
+      "Disability Description": "Limb loss",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-05"
+    },
+    {
+      "Civil ID": "10000133",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-22"
+    },
+    {
+      "Civil ID": "10000134",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-27"
+    },
+    {
+      "Civil ID": "10000135",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-18"
+    },
+    {
+      "Civil ID": "10000136",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-23"
+    },
+    {
+      "Civil ID": "10000137",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-05"
+    },
+    {
+      "Civil ID": "10000138",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-19"
+    },
+    {
+      "Civil ID": "10000139",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-22"
+    },
+    {
+      "Civil ID": "10000140",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-05"
+    },
+    {
+      "Civil ID": "10000141",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-18"
+    },
+    {
+      "Civil ID": "10000142",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-23"
+    },
+    {
+      "Civil ID": "10000143",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-18"
+    },
+    {
+      "Civil ID": "10000144",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-02"
+    },
+    {
+      "Civil ID": "10000145",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-07"
+    },
+    {
+      "Civil ID": "10000146",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-23"
+    },
+    {
+      "Civil ID": "10000147",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-17"
+    },
+    {
+      "Civil ID": "10000148",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-28"
+    },
+    {
+      "Civil ID": "10000149",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-16"
+    },
+    {
+      "Civil ID": "10000150",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-14"
+    },
+    {
+      "Civil ID": "10000151",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-02"
+    },
+    {
+      "Civil ID": "10000152",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-19"
+    },
+    {
+      "Civil ID": "10000153",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-26"
+    },
+    {
+      "Civil ID": "10000154",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-05"
+    },
+    {
+      "Civil ID": "10000155",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-07"
+    },
+    {
+      "Civil ID": "10000156",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-25"
+    },
+    {
+      "Civil ID": "10000157",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-06"
+    },
+    {
+      "Civil ID": "10000158",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-07"
+    },
+    {
+      "Civil ID": "10000159",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-17"
+    },
+    {
+      "Civil ID": "10000160",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-07"
+    },
+    {
+      "Civil ID": "10000161",
+      "Disability Description": "Limb loss",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-20"
+    },
+    {
+      "Civil ID": "10000162",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-24"
+    },
+    {
+      "Civil ID": "10000163",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-10"
+    },
+    {
+      "Civil ID": "10000164",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-23"
+    },
+    {
+      "Civil ID": "10000165",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-14"
+    },
+    {
+      "Civil ID": "10000166",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-09"
+    },
+    {
+      "Civil ID": "10000167",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-30"
+    },
+    {
+      "Civil ID": "10000168",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-05"
+    },
+    {
+      "Civil ID": "10000169",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-02"
+    },
+    {
+      "Civil ID": "10000170",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-03"
+    },
+    {
+      "Civil ID": "10000171",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-14"
+    },
+    {
+      "Civil ID": "10000172",
+      "Disability Description": "Limb loss",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-07"
+    },
+    {
+      "Civil ID": "10000173",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-25"
+    },
+    {
+      "Civil ID": "10000174",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-06"
+    },
+    {
+      "Civil ID": "10000175",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-01"
+    },
+    {
+      "Civil ID": "10000176",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-02"
+    },
+    {
+      "Civil ID": "10000177",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-04"
+    },
+    {
+      "Civil ID": "10000178",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-28"
+    },
+    {
+      "Civil ID": "10000179",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-05"
+    },
+    {
+      "Civil ID": "10000180",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-23"
+    },
+    {
+      "Civil ID": "10000181",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-21"
+    },
+    {
+      "Civil ID": "10000182",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-18"
+    },
+    {
+      "Civil ID": "10000183",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-06"
+    },
+    {
+      "Civil ID": "10000184",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-10"
+    },
+    {
+      "Civil ID": "10000185",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-25"
+    },
+    {
+      "Civil ID": "10000186",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-14"
+    },
+    {
+      "Civil ID": "10000187",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-15"
+    },
+    {
+      "Civil ID": "10000188",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-12"
+    },
+    {
+      "Civil ID": "10000189",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-26"
+    },
+    {
+      "Civil ID": "10000190",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-27"
+    },
+    {
+      "Civil ID": "10000191",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-10"
+    },
+    {
+      "Civil ID": "10000192",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-03-01"
+    },
+    {
+      "Civil ID": "10000193",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-23"
+    },
+    {
+      "Civil ID": "10000194",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-20"
+    },
+    {
+      "Civil ID": "10000195",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-31"
+    },
+    {
+      "Civil ID": "10000196",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-09"
+    },
+    {
+      "Civil ID": "10000197",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-04"
+    },
+    {
+      "Civil ID": "10000198",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-15"
+    },
+    {
+      "Civil ID": "10000199",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-22"
+    },
+    {
+      "Civil ID": "10000200",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-20"
+    },
+    {
+      "Civil ID": "10000201",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-24"
+    },
+    {
+      "Civil ID": "10000202",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-26"
+    },
+    {
+      "Civil ID": "10000203",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-11"
+    },
+    {
+      "Civil ID": "10000204",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-08"
+    },
+    {
+      "Civil ID": "10000205",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-20"
+    },
+    {
+      "Civil ID": "10000206",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-20"
+    },
+    {
+      "Civil ID": "10000207",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-12"
+    },
+    {
+      "Civil ID": "10000208",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-12"
+    },
+    {
+      "Civil ID": "10000209",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-09"
+    },
+    {
+      "Civil ID": "10000210",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-16"
+    },
+    {
+      "Civil ID": "10000211",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-03"
+    },
+    {
+      "Civil ID": "10000212",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-26"
+    },
+    {
+      "Civil ID": "10000213",
+      "Disability Description": "Limb loss",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-05"
+    },
+    {
+      "Civil ID": "10000214",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-21"
+    },
+    {
+      "Civil ID": "10000215",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-19"
+    },
+    {
+      "Civil ID": "10000216",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-12"
+    },
+    {
+      "Civil ID": "10000217",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-18"
+    },
+    {
+      "Civil ID": "10000218",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-03"
+    },
+    {
+      "Civil ID": "10000219",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-28"
+    },
+    {
+      "Civil ID": "10000220",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-04"
+    },
+    {
+      "Civil ID": "10000221",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-13"
+    },
+    {
+      "Civil ID": "10000222",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-03"
+    },
+    {
+      "Civil ID": "10000223",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-06"
+    },
+    {
+      "Civil ID": "10000224",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-13"
+    },
+    {
+      "Civil ID": "10000225",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-31"
+    },
+    {
+      "Civil ID": "10000226",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-25"
+    },
+    {
+      "Civil ID": "10000227",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-20"
+    },
+    {
+      "Civil ID": "10000228",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-17"
+    },
+    {
+      "Civil ID": "10000229",
+      "Disability Description": "Limb loss",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-23"
+    },
+    {
+      "Civil ID": "10000230",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-13"
+    },
+    {
+      "Civil ID": "10000231",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-29"
+    },
+    {
+      "Civil ID": "10000232",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-18"
+    },
+    {
+      "Civil ID": "10000233",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-24"
+    },
+    {
+      "Civil ID": "10000234",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-24"
+    },
+    {
+      "Civil ID": "10000235",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-06"
+    },
+    {
+      "Civil ID": "10000236",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-03"
+    },
+    {
+      "Civil ID": "10000237",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-06"
+    },
+    {
+      "Civil ID": "10000238",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-15"
+    },
+    {
+      "Civil ID": "10000239",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-15"
+    },
+    {
+      "Civil ID": "10000240",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-11"
+    },
+    {
+      "Civil ID": "10000241",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-12"
+    },
+    {
+      "Civil ID": "10000242",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-27"
+    },
+    {
+      "Civil ID": "10000243",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-30"
+    },
+    {
+      "Civil ID": "10000244",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-06"
+    },
+    {
+      "Civil ID": "10000245",
+      "Disability Description": "Limb loss",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-16"
+    },
+    {
+      "Civil ID": "10000246",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-21"
+    },
+    {
+      "Civil ID": "10000247",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-27"
+    },
+    {
+      "Civil ID": "10000248",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-24"
+    },
+    {
+      "Civil ID": "10000249",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-28"
+    },
+    {
+      "Civil ID": "10000250",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-03"
+    },
+    {
+      "Civil ID": "10000251",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-08"
+    },
+    {
+      "Civil ID": "10000252",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-17"
+    },
+    {
+      "Civil ID": "10000253",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-09"
+    },
+    {
+      "Civil ID": "10000254",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-05"
+    },
+    {
+      "Civil ID": "10000255",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-30"
+    },
+    {
+      "Civil ID": "10000256",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-25"
+    },
+    {
+      "Civil ID": "10000257",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-14"
+    },
+    {
+      "Civil ID": "10000258",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-14"
+    },
+    {
+      "Civil ID": "10000259",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-19"
+    },
+    {
+      "Civil ID": "10000260",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-12"
+    },
+    {
+      "Civil ID": "10000261",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-02"
+    },
+    {
+      "Civil ID": "10000262",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-23"
+    },
+    {
+      "Civil ID": "10000263",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-15"
+    },
+    {
+      "Civil ID": "10000264",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-29"
+    },
+    {
+      "Civil ID": "10000265",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-13"
+    },
+    {
+      "Civil ID": "10000266",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-25"
+    },
+    {
+      "Civil ID": "10000267",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-12"
+    },
+    {
+      "Civil ID": "10000268",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-01"
+    },
+    {
+      "Civil ID": "10000269",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-03"
+    },
+    {
+      "Civil ID": "10000270",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-12"
+    },
+    {
+      "Civil ID": "10000271",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-27"
+    },
+    {
+      "Civil ID": "10000272",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-23"
+    },
+    {
+      "Civil ID": "10000273",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-26"
+    },
+    {
+      "Civil ID": "10000274",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-19"
+    },
+    {
+      "Civil ID": "10000275",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-09"
+    },
+    {
+      "Civil ID": "10000276",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-15"
+    },
+    {
+      "Civil ID": "10000277",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-25"
+    },
+    {
+      "Civil ID": "10000278",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-15"
+    },
+    {
+      "Civil ID": "10000279",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-01"
+    },
+    {
+      "Civil ID": "10000280",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-09"
+    },
+    {
+      "Civil ID": "10000281",
+      "Disability Description": "Limb loss",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-03"
+    },
+    {
+      "Civil ID": "10000282",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-14"
+    },
+    {
+      "Civil ID": "10000283",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-21"
+    },
+    {
+      "Civil ID": "10000284",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-14"
+    },
+    {
+      "Civil ID": "10000285",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-19"
+    },
+    {
+      "Civil ID": "10000286",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-02"
+    },
+    {
+      "Civil ID": "10000287",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-31"
+    },
+    {
+      "Civil ID": "10000288",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-22"
+    },
+    {
+      "Civil ID": "10000289",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-07"
+    },
+    {
+      "Civil ID": "10000290",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-08"
+    },
+    {
+      "Civil ID": "10000291",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-29"
+    },
+    {
+      "Civil ID": "10000292",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-07"
+    },
+    {
+      "Civil ID": "10000293",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-03"
+    },
+    {
+      "Civil ID": "10000294",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-14"
+    },
+    {
+      "Civil ID": "10000295",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-20"
+    },
+    {
+      "Civil ID": "10000296",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-14"
+    },
+    {
+      "Civil ID": "10000297",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-21"
+    },
+    {
+      "Civil ID": "10000298",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-23"
+    },
+    {
+      "Civil ID": "10000299",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-09"
+    },
+    {
+      "Civil ID": "10000300",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-02"
+    },
+    {
+      "Civil ID": "10000301",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-31"
+    },
+    {
+      "Civil ID": "10000302",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-12"
+    },
+    {
+      "Civil ID": "10000303",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-12"
+    },
+    {
+      "Civil ID": "10000304",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-20"
+    },
+    {
+      "Civil ID": "10000305",
+      "Disability Description": "Limb loss",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-20"
+    },
+    {
+      "Civil ID": "10000306",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-14"
+    },
+    {
+      "Civil ID": "10000307",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-02"
+    },
+    {
+      "Civil ID": "10000308",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-05"
+    },
+    {
+      "Civil ID": "10000309",
+      "Disability Description": "Limb loss",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-20"
+    },
+    {
+      "Civil ID": "10000310",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-05"
+    },
+    {
+      "Civil ID": "10000311",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-01"
+    },
+    {
+      "Civil ID": "10000312",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-01"
+    },
+    {
+      "Civil ID": "10000313",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-22"
+    },
+    {
+      "Civil ID": "10000314",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-06"
+    },
+    {
+      "Civil ID": "10000315",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-11"
+    },
+    {
+      "Civil ID": "10000316",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-20"
+    },
+    {
+      "Civil ID": "10000317",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-07"
+    },
+    {
+      "Civil ID": "10000318",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-01"
+    },
+    {
+      "Civil ID": "10000319",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-11"
+    },
+    {
+      "Civil ID": "10000320",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-20"
+    },
+    {
+      "Civil ID": "10000321",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-07"
+    },
+    {
+      "Civil ID": "10000322",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-19"
+    },
+    {
+      "Civil ID": "10000323",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-16"
+    },
+    {
+      "Civil ID": "10000324",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-02"
+    },
+    {
+      "Civil ID": "10000325",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-13"
+    },
+    {
+      "Civil ID": "10000326",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-08"
+    },
+    {
+      "Civil ID": "10000327",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-17"
+    },
+    {
+      "Civil ID": "10000328",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-04"
+    },
+    {
+      "Civil ID": "10000329",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-27"
+    },
+    {
+      "Civil ID": "10000330",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-09"
+    },
+    {
+      "Civil ID": "10000331",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-27"
+    },
+    {
+      "Civil ID": "10000332",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-17"
+    },
+    {
+      "Civil ID": "10000333",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-22"
+    },
+    {
+      "Civil ID": "10000334",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-31"
+    },
+    {
+      "Civil ID": "10000335",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-19"
+    },
+    {
+      "Civil ID": "10000336",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-24"
+    },
+    {
+      "Civil ID": "10000337",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-19"
+    },
+    {
+      "Civil ID": "10000338",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-27"
+    },
+    {
+      "Civil ID": "10000339",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-27"
+    },
+    {
+      "Civil ID": "10000340",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-29"
+    },
+    {
+      "Civil ID": "10000341",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-19"
+    },
+    {
+      "Civil ID": "10000342",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-04"
+    },
+    {
+      "Civil ID": "10000343",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-04"
+    },
+    {
+      "Civil ID": "10000344",
+      "Disability Description": "Limb loss",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-18"
+    },
+    {
+      "Civil ID": "10000345",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-24"
+    },
+    {
+      "Civil ID": "10000346",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-12"
+    },
+    {
+      "Civil ID": "10000347",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-04"
+    },
+    {
+      "Civil ID": "10000348",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-14"
+    },
+    {
+      "Civil ID": "10000349",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-25"
+    },
+    {
+      "Civil ID": "10000350",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-22"
+    },
+    {
+      "Civil ID": "10000351",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-21"
+    },
+    {
+      "Civil ID": "10000352",
+      "Disability Description": "Limb loss",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-07"
+    },
+    {
+      "Civil ID": "10000353",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-17"
+    },
+    {
+      "Civil ID": "10000354",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-25"
+    },
+    {
+      "Civil ID": "10000355",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-05"
+    },
+    {
+      "Civil ID": "10000356",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-20"
+    },
+    {
+      "Civil ID": "10000357",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-26"
+    },
+    {
+      "Civil ID": "10000358",
+      "Disability Description": "Limb loss",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-15"
+    },
+    {
+      "Civil ID": "10000359",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-02"
+    },
+    {
+      "Civil ID": "10000360",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-14"
+    },
+    {
+      "Civil ID": "10000361",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-10"
+    },
+    {
+      "Civil ID": "10000362",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-07"
+    },
+    {
+      "Civil ID": "10000363",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-28"
+    },
+    {
+      "Civil ID": "10000364",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-17"
+    },
+    {
+      "Civil ID": "10000365",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-06"
+    },
+    {
+      "Civil ID": "10000366",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-16"
+    },
+    {
+      "Civil ID": "10000367",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-10"
+    },
+    {
+      "Civil ID": "10000368",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-15"
+    },
+    {
+      "Civil ID": "10000369",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-09"
+    },
+    {
+      "Civil ID": "10000370",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-28"
+    },
+    {
+      "Civil ID": "10000371",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-18"
+    },
+    {
+      "Civil ID": "10000372",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-07"
+    },
+    {
+      "Civil ID": "10000373",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-28"
+    },
+    {
+      "Civil ID": "10000374",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-27"
+    },
+    {
+      "Civil ID": "10000375",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-10"
+    },
+    {
+      "Civil ID": "10000376",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-09"
+    },
+    {
+      "Civil ID": "10000377",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-19"
+    },
+    {
+      "Civil ID": "10000378",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-17"
+    },
+    {
+      "Civil ID": "10000379",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-21"
+    },
+    {
+      "Civil ID": "10000380",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-18"
+    },
+    {
+      "Civil ID": "10000381",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-29"
+    },
+    {
+      "Civil ID": "10000382",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-22"
+    },
+    {
+      "Civil ID": "10000383",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-27"
+    },
+    {
+      "Civil ID": "10000384",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-30"
+    },
+    {
+      "Civil ID": "10000385",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-18"
+    },
+    {
+      "Civil ID": "10000386",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-20"
+    },
+    {
+      "Civil ID": "10000387",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-24"
+    },
+    {
+      "Civil ID": "10000388",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-26"
+    },
+    {
+      "Civil ID": "10000389",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-09"
+    },
+    {
+      "Civil ID": "10000390",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-03"
+    },
+    {
+      "Civil ID": "10000391",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-24"
+    },
+    {
+      "Civil ID": "10000392",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-22"
+    },
+    {
+      "Civil ID": "10000393",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-22"
+    },
+    {
+      "Civil ID": "10000394",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-15"
+    },
+    {
+      "Civil ID": "10000395",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-20"
+    },
+    {
+      "Civil ID": "10000396",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-22"
+    },
+    {
+      "Civil ID": "10000397",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-01"
+    },
+    {
+      "Civil ID": "10000398",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-17"
+    },
+    {
+      "Civil ID": "10000399",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-07"
+    },
+    {
+      "Civil ID": "10000400",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-02"
+    },
+    {
+      "Civil ID": "10000401",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-27"
+    },
+    {
+      "Civil ID": "10000402",
+      "Disability Description": "Limb loss",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-02"
+    },
+    {
+      "Civil ID": "10000403",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-05"
+    },
+    {
+      "Civil ID": "10000404",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-15"
+    },
+    {
+      "Civil ID": "10000405",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-17"
+    },
+    {
+      "Civil ID": "10000406",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-13"
+    },
+    {
+      "Civil ID": "10000407",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-13"
+    },
+    {
+      "Civil ID": "10000408",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-01"
+    },
+    {
+      "Civil ID": "10000409",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-25"
+    },
+    {
+      "Civil ID": "10000410",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-23"
+    },
+    {
+      "Civil ID": "10000411",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-07"
+    },
+    {
+      "Civil ID": "10000412",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-21"
+    },
+    {
+      "Civil ID": "10000413",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-26"
+    },
+    {
+      "Civil ID": "10000414",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-04"
+    },
+    {
+      "Civil ID": "10000415",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-21"
+    },
+    {
+      "Civil ID": "10000416",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-04"
+    },
+    {
+      "Civil ID": "10000417",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-14"
+    },
+    {
+      "Civil ID": "10000418",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-12"
+    },
+    {
+      "Civil ID": "10000419",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-27"
+    },
+    {
+      "Civil ID": "10000420",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-08"
+    },
+    {
+      "Civil ID": "10000421",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-08"
+    },
+    {
+      "Civil ID": "10000422",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-22"
+    },
+    {
+      "Civil ID": "10000423",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-13"
+    },
+    {
+      "Civil ID": "10000424",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-09"
+    },
+    {
+      "Civil ID": "10000425",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-15"
+    },
+    {
+      "Civil ID": "10000426",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-22"
+    },
+    {
+      "Civil ID": "10000427",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-12"
+    },
+    {
+      "Civil ID": "10000428",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-08"
+    },
+    {
+      "Civil ID": "10000429",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-15"
+    },
+    {
+      "Civil ID": "10000430",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-30"
+    },
+    {
+      "Civil ID": "10000431",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-03"
+    },
+    {
+      "Civil ID": "10000432",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-27"
+    },
+    {
+      "Civil ID": "10000433",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-01"
+    },
+    {
+      "Civil ID": "10000434",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-21"
+    },
+    {
+      "Civil ID": "10000435",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-07"
+    },
+    {
+      "Civil ID": "10000436",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-22"
+    },
+    {
+      "Civil ID": "10000437",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-04"
+    },
+    {
+      "Civil ID": "10000438",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-05"
+    },
+    {
+      "Civil ID": "10000439",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-08"
+    },
+    {
+      "Civil ID": "10000440",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-23"
+    },
+    {
+      "Civil ID": "10000441",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-20"
+    },
+    {
+      "Civil ID": "10000442",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-13"
+    },
+    {
+      "Civil ID": "10000443",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-27"
+    },
+    {
+      "Civil ID": "10000444",
+      "Disability Description": "Limb loss",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-28"
+    },
+    {
+      "Civil ID": "10000445",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-27"
+    },
+    {
+      "Civil ID": "10000446",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-11"
+    },
+    {
+      "Civil ID": "10000447",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-24"
+    },
+    {
+      "Civil ID": "10000448",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-08"
+    },
+    {
+      "Civil ID": "10000449",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-31"
+    },
+    {
+      "Civil ID": "10000450",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-09"
+    },
+    {
+      "Civil ID": "10000451",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-05"
+    },
+    {
+      "Civil ID": "10000452",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-07"
+    },
+    {
+      "Civil ID": "10000453",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-11"
+    },
+    {
+      "Civil ID": "10000454",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-18"
+    },
+    {
+      "Civil ID": "10000455",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-03"
+    },
+    {
+      "Civil ID": "10000456",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-03"
+    },
+    {
+      "Civil ID": "10000457",
+      "Disability Description": "Limb loss",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-03"
+    },
+    {
+      "Civil ID": "10000458",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-20"
+    },
+    {
+      "Civil ID": "10000459",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-02"
+    },
+    {
+      "Civil ID": "10000460",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-27"
+    },
+    {
+      "Civil ID": "10000461",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-18"
+    },
+    {
+      "Civil ID": "10000462",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-22"
+    },
+    {
+      "Civil ID": "10000463",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-01"
+    },
+    {
+      "Civil ID": "10000464",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-11"
+    },
+    {
+      "Civil ID": "10000465",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-01"
+    },
+    {
+      "Civil ID": "10000466",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-06"
+    },
+    {
+      "Civil ID": "10000467",
+      "Disability Description": "Limb loss",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-17"
+    },
+    {
+      "Civil ID": "10000468",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-26"
+    },
+    {
+      "Civil ID": "10000469",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-25"
+    },
+    {
+      "Civil ID": "10000470",
+      "Disability Description": "Depression",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-21"
+    },
+    {
+      "Civil ID": "10000471",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-09"
+    },
+    {
+      "Civil ID": "10000472",
+      "Disability Description": "Limb loss",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-01"
+    },
+    {
+      "Civil ID": "10000473",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-20"
+    },
+    {
+      "Civil ID": "10000474",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-16"
+    },
+    {
+      "Civil ID": "10000475",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-21"
+    },
+    {
+      "Civil ID": "10000476",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-10"
+    },
+    {
+      "Civil ID": "10000477",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-20"
+    },
+    {
+      "Civil ID": "10000478",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-27"
+    },
+    {
+      "Civil ID": "10000479",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-20"
+    },
+    {
+      "Civil ID": "10000480",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-02"
+    },
+    {
+      "Civil ID": "10000481",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-25"
+    },
+    {
+      "Civil ID": "10000482",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-16"
+    },
+    {
+      "Civil ID": "10000483",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-02"
+    },
+    {
+      "Civil ID": "10000484",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-18"
+    },
+    {
+      "Civil ID": "10000485",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-10"
+    },
+    {
+      "Civil ID": "10000486",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-09"
+    },
+    {
+      "Civil ID": "10000487",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-04"
+    },
+    {
+      "Civil ID": "10000488",
+      "Disability Description": "Autism",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-01-16"
+    },
+    {
+      "Civil ID": "10000489",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-29"
+    },
+    {
+      "Civil ID": "10000490",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-24"
+    },
+    {
+      "Civil ID": "10000491",
+      "Disability Description": "Paralysis",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-02-27"
+    },
+    {
+      "Civil ID": "10000492",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-01-15"
+    },
+    {
+      "Civil ID": "10000493",
+      "Disability Description": "Total blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-17"
+    },
+    {
+      "Civil ID": "10000494",
+      "Disability Description": "Deaf in one ear",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-25"
+    },
+    {
+      "Civil ID": "10000495",
+      "Disability Description": "Schizophrenia",
+      "Disability Type": "Mental",
+      "Date Submitted": "2025-02-07"
+    },
+    {
+      "Civil ID": "10000496",
+      "Disability Description": "Partial blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-02-05"
+    },
+    {
+      "Civil ID": "10000497",
+      "Disability Description": "Color blindness",
+      "Disability Type": "Visual",
+      "Date Submitted": "2025-01-01"
+    },
+    {
+      "Civil ID": "10000498",
+      "Disability Description": "Complete hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-14"
+    },
+    {
+      "Civil ID": "10000499",
+      "Disability Description": "Amputation below knee",
+      "Disability Type": "Physical",
+      "Date Submitted": "2025-01-26"
+    },
+    {
+      "Civil ID": "10000500",
+      "Disability Description": "Mild hearing loss",
+      "Disability Type": "Hearing",
+      "Date Submitted": "2025-02-16"
+    }
+  ]
