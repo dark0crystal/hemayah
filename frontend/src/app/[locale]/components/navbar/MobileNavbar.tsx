@@ -49,19 +49,15 @@ export default function MobileNavbar() {
         <div
           className={`absolute top-[12vh] left-0 w-full h-screen bg-white z-50 flex flex-col  space-y-6 p-6`}
         >
-          <Link href="/search" onClick={toggleNavbar}>
+          <Link href="/analysis" onClick={toggleNavbar}>
             <h1 className="text-2xl font-normal text-gray-700 hover:text-blue-600">
               {t("search")}
             </h1>
           </Link>
 
-          <Link href="/report-found-item" onClick={toggleNavbar}>
-            <h1 className="text-2xl font-normal text-gray-700 hover:text-blue-600">
-              {t("report")}
-            </h1>
-          </Link>
+        
 
-          <LanguageChange/>
+   
         </div>
       )}
 
