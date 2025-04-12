@@ -5,9 +5,9 @@
       "about": "Go to the about page"
     },
     "navbar":{
-        "brand":"",
-        "brand-duplicate":"هاكاثون حماية",
-        "search":"تيست",
+        "brand":"حِماية.Ai",
+        "brand-duplicate":" حماية.Ai",
+        "search":"لوحة التحكم",
         "searchBtn":"Search Something",
         "dashboard":"لوحة التحكم",
         "report":"تيست",

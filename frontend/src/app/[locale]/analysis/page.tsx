@@ -2,6 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import { DisabilityForecastChart } from '@/app/components/charts/DisabilityForecastChart';
+import { useRouter } from 'next/navigation';
+import { Link } from '@/i18n/routing';
+import { useTestDataStore } from '@/app/store/testDataStore';
 
 export default function AnalysisPage() {
   const [historicalData, setHistoricalData] = useState<any[]>([]);
@@ -11,6 +14,8 @@ export default function AnalysisPage() {
   const [showTestData, setShowTestData] = useState(false);
   const [anomalyDates, setAnomalyDates] = useState<string[]>([]);
   const [anomalyAlert, setAnomalyAlert] = useState<string | null>(null);
+  const router = useRouter();
+  const { setTestData: storeTestData } = useTestDataStore();
 
   useEffect(() => {
     const loadData = () => {
@@ -21,13 +26,16 @@ export default function AnalysisPage() {
         setHistoricalData(SAMPLE_HISTORICAL_DATA);
         setForecastData(SAMPLE_FORECAST_DATA);
         setTestData(TEST_DATA);
+        
+        // Save test data to the store for access from check page
+        storeTestData(TEST_DATA);
       } finally {
         setIsLoading(false);
       }
     };
 
     loadData();
-  }, []);
+  }, [storeTestData]);
 
   const handleApplyTestData = () => {
     setShowTestData(true);
@@ -41,6 +49,10 @@ export default function AnalysisPage() {
     } else {
       setAnomalyAlert(null);
     }
+  };
+
+  const handleNavigateToCheck = () => {
+    router.push('/check');
   };
 
   const detectAnomalies = (testData: any[], forecastData: any[]) => {
@@ -68,7 +80,7 @@ export default function AnalysisPage() {
   
   return (
     <div className="container mx-auto py-8 px-4">
-      <h1 className="text-3xl font-bold mb-6">تحليل طلبات الإعاقة</h1>
+      <h1 className="text-3xl font-bold mb-6">(Use Case)تحليل طلبات ذوي الإعاقة</h1>
       
       {isLoading ? (
         <div className="flex justify-center items-center h-96">
@@ -84,7 +96,7 @@ export default function AnalysisPage() {
             />
           </div>
           
-          <div className="mb-6">
+          <div className="mb-6 flex space-x-4 rtl:space-x-reverse">
             <button 
               onClick={handleApplyTestData}
               disabled={showTestData}
@@ -92,6 +104,15 @@ export default function AnalysisPage() {
             >
               {showTestData ? "تم تطبيق بيانات الاختبار" : "تطبيق بيانات الاختبار"}
             </button>
+            
+            {showTestData && (
+              <Link 
+                href="/check"
+                className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg focus:outline-none focus:shadow-outline transition-all duration-300 transform hover:scale-105"
+              >
+                الانتقال إلى صفحة الفحص
+              </Link>
+            )}
           </div>
           
           {anomalyAlert && (
@@ -899,12 +920,12 @@ const SAMPLE_HISTORICAL_DATA = [
     "Disability Type": "Mental",
     "Date Submitted": "2025-02-11"
   },
-  {
-    "Civil ID": "10000026",
-    "Disability Description": "Amputation below knee",
-    "Disability Type": "Physical",
-    "Date Submitted": "2025-02-27"
-  },
+  // {
+  //   "Civil ID": "10000026",
+  //   "Disability Description": "Amputation below knee",
+  //   "Disability Type": "Physical",
+  //   "Date Submitted": "2025-02-27"
+  // },
   {
     "Civil ID": "10000027",
     "Disability Description": "Partial blindness",
@@ -923,12 +944,12 @@ const SAMPLE_HISTORICAL_DATA = [
     "Disability Type": "Visual",
     "Date Submitted": "2025-01-28"
   },
-  {
-    "Civil ID": "10000030",
-    "Disability Description": "Partial blindness",
-    "Disability Type": "Visual",
-    "Date Submitted": "2025-02-27"
-  },
+  // {
+  //   "Civil ID": "10000030",
+  //   "Disability Description": "Partial blindness",
+  //   "Disability Type": "Visual",
+  //   "Date Submitted": "2025-02-27"
+  // },
   {
     "Civil ID": "10000031",
     "Disability Description": "Schizophrenia",
@@ -1025,12 +1046,12 @@ const SAMPLE_HISTORICAL_DATA = [
     "Disability Type": "Mental",
     "Date Submitted": "2025-01-14"
   },
-  {
-    "Civil ID": "10000047",
-    "Disability Description": "Deaf in one ear",
-    "Disability Type": "Hearing",
-    "Date Submitted": "2025-02-27"
-  },
+  // {
+  //   "Civil ID": "10000047",
+  //   "Disability Description": "Deaf in one ear",
+  //   "Disability Type": "Hearing",
+  //   "Date Submitted": "2025-02-27"
+  // },
   {
     "Civil ID": "10000048",
     "Disability Description": "Total blindness",
@@ -1259,24 +1280,24 @@ const SAMPLE_HISTORICAL_DATA = [
     "Disability Type": "Hearing",
     "Date Submitted": "2025-01-05"
   },
-  {
-    "Civil ID": "10000086",
-    "Disability Description": "Deaf in one ear",
-    "Disability Type": "Hearing",
-    "Date Submitted": "2025-01-20"
-  },
+  // {
+  //   "Civil ID": "10000086",
+  //   "Disability Description": "Deaf in one ear",
+  //   "Disability Type": "Hearing",
+  //   "Date Submitted": "2025-01-20"
+  // },
   {
     "Civil ID": "10000087",
     "Disability Description": "Autism",
     "Disability Type": "Mental",
     "Date Submitted": "2025-02-01"
   },
-  {
-    "Civil ID": "10000088",
-    "Disability Description": "Autism",
-    "Disability Type": "Mental",
-    "Date Submitted": "2025-01-20"
-  },
+  // {
+  //   "Civil ID": "10000088",
+  //   "Disability Description": "Autism",
+  //   "Disability Type": "Mental",
+  //   "Date Submitted": "2025-01-20"
+  // },
   {
     "Civil ID": "10000089",
     "Disability Description": "Partial blindness",
@@ -1349,12 +1370,12 @@ const SAMPLE_HISTORICAL_DATA = [
     "Disability Type": "Physical",
     "Date Submitted": "2025-02-28"
   },
-  {
-    "Civil ID": "10000101",
-    "Disability Description": "Depression",
-    "Disability Type": "Mental",
-    "Date Submitted": "2025-01-20"
-  },
+  // {
+  //   "Civil ID": "10000101",
+  //   "Disability Description": "Depression",
+  //   "Disability Type": "Mental",
+  //   "Date Submitted": "2025-01-20"
+  // },
   {
     "Civil ID": "10000102",
     "Disability Description": "Color blindness",
@@ -1445,12 +1466,12 @@ const SAMPLE_HISTORICAL_DATA = [
     "Disability Type": "Hearing",
     "Date Submitted": "2025-01-11"
   },
-  {
-    "Civil ID": "10000117",
-    "Disability Description": "Partial blindness",
-    "Disability Type": "Visual",
-    "Date Submitted": "2025-02-20"
-  },
+  // {
+  //   "Civil ID": "10000117",
+  //   "Disability Description": "Partial blindness",
+  //   "Disability Type": "Visual",
+  //   "Date Submitted": "2025-02-20"
+  // },
   {
     "Civil ID": "10000118",
     "Disability Description": "Complete hearing loss",

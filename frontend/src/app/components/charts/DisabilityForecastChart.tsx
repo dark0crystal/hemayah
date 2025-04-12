@@ -213,7 +213,7 @@ export function DisabilityForecastChart({
 
   return (
     <div className="w-full">
-      <h2 className="text-xl font-bold mb-4">Disability Applications: Historical and Forecast</h2>
+      <h2 className="text-xl font-bold mb-4">البيانات التاريخية والتنبؤية</h2>
       <div className="h-[500px]">
         <ResponsiveContainer width="100%" height="100%">
           <ComposedChart
@@ -244,7 +244,7 @@ export function DisabilityForecastChart({
             <Legend verticalAlign="top" height={36} />
             
             {/* Present day reference line */}
-            <ReferenceLine
+            {/* <ReferenceLine
               x={todayDate}
               stroke="#ff0000"
               strokeWidth={2}
@@ -255,7 +255,7 @@ export function DisabilityForecastChart({
                 fill: "#ff0000",
                 fontSize: 12
               }}
-            />
+            /> */}
 
             {/* Historical data */}
             <Line
