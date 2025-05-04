@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { DisabilityForecastChart } from '@/app/components/charts/DisabilityForecastChart';
 import { useRouter } from 'next/navigation';
 import { Link } from '@/i18n/routing';
-import { useTestDataStore } from '@/app/store/testDataStore';
+import { useTestDataStore } from '../../store/testDataStore';
 
 export default function AnalysisPage() {
   const [historicalData, setHistoricalData] = useState<any[]>([]);
