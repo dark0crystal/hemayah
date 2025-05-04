@@ -296,28 +296,32 @@ export function DisabilityForecastChart({
                 dataKey="anomalyCount"
                 fill="#ff0000"
                 name="Anomalies"
-                shape={({ cx, cy }) => (
-                  <svg>
-                    <circle 
-                      cx={cx} 
-                      cy={cy} 
-                      r={anomalyPointSize} 
-                      fill="#ff0000" 
-                      stroke="#ffffff" 
-                      strokeWidth={2} 
-                    />
-                    <circle 
-                      cx={cx} 
-                      cy={cy} 
-                      r={anomalyPointSize + 4} 
-                      fill="none" 
-                      stroke="#ff0000" 
-                      strokeWidth={1.5} 
-                      strokeDasharray="4 4"
-                      opacity={0.6}
-                    />
-                  </svg>
-                )}
+                shape={(props: any) => {
+                  const { cx, cy } = props;
+                  return (
+                    <svg>
+                      <circle 
+                        cx={cx} 
+                        cy={cy} 
+                        r={anomalyPointSize} 
+                        fill="#ff0000" 
+                        stroke="#ffffff" 
+                        strokeWidth={2} 
+                      />
+                      <circle 
+                        cx={cx} 
+                        cy={cy} 
+                        r={anomalyPointSize + 4} 
+                        fill="none" 
+                        stroke="#ff0000" 
+                        strokeWidth={1.5} 
+                        strokeDasharray="4 4"
+                        opacity={0.6}
+                      />
+                    </svg>
+                  );
+                }}
+                
               />
             )}
 
